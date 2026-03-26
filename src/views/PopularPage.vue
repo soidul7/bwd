@@ -1,91 +1,36 @@
 <template>
-     <div class="tab-content">
-        <div class="tab-item">
-          <div style="cursor:pointer;" class="list-item" v-for="(blog) in blogList.data" v-bind:key="blog.id" v-on:click="blogDetails(blog.slug),moveUp()">
-            <img src="frontend/images/blog/angle 41.png" alt="">
-            <div class="ttr" >
-              <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16">
-                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
-                <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
-              </svg> {{moment(blog.date).startOf("month").format('MMMM')}} {{moment(blog.date).startOf("day").format('DD')}}, {{moment(blog.date).startOf("year").format('YYYY')}}</p>
-              <h6>{{blog.title}}</h6>
-            </div>
-          </div>
-          <!-- <div class="list-item">
-            <img src="frontend/images/blog/angle 41 (1).png" alt="">
-            <div class="ttr">
-              <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16">
-                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
-                <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
-              </svg> 23 Mar, 2022</p>
-              <h6>Build Your Business By A Professional Logo Designing Service </h6>
-            </div>
-          </div>
-          <div class="list-item">
-            <img src="frontend/images/blog/angle 41 (2).png" alt="">
-            <div class="ttr">
-              <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16">
-                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
-                <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
-              </svg> 23 Mar, 2022</p>
-              <h6>Bank on New Techniques to Promote Gaming Website</h6>
-            </div>
-          </div> -->
+  <div class="tab-content">
+    <div class="tab-item">
+      <div style="cursor:pointer;" class="list-item" v-for="(blog) in blogData" v-bind:key="blog.postID" v-on:click="blogDetails(blog.slug), moveUp()">
+        <img src="frontend/images/blog/angle 41.png" alt="">
+        <div class="ttr">
+          <p>{{blog.date}}</p>
+          <h6>{{blog.title}}</h6>
         </div>
       </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-import { BASE_URL_API2 ,BASE_URL_IMAGE} from '../config'
-import axios from 'axios'
-import moment from "moment";
-
-import { createLocal } from 'the-storages'
-const mirror = createLocal()
-const storage = mirror._prx
 
 export default defineComponent({
-  name: 'Breakpoints',
-  components: {
-
+  name: 'PopularPage',
+  props: {
+    blogData: {
+      type: Array,
+      default: () => []
+    }
   },
-  data: () => ({
-    moment: moment,
-    blogList:{},
-    storageData: mirror,
-    storage: storage,
-  }),
-  async created(){
-    this.blogId = mirror.blogId;
-    //this.storage.set('blogId', this.blogId)
-    //console.log("BLOG ID P: ",this.blogId);
-    this.image_url = BASE_URL_IMAGE+'uploads/';
-    
-    //const response = await axios.get(BASE_URL_API2+'blog/popular/except-open/'+this.blogId);
-    const response = {"data":[{"id":1,"category_id":"1,2","title":"Amplify business through social media marketing","content":"<p><span style=\"font-size: 18pt; font-family: arial, helvetica, sans-serif;\"><strong>Concept</strong></span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">The way businesses locate and engage with their audiences has changed dramatically as a result of social media. Given that 3.5 billion individuals (almost half of the worlds population) use it on a daily basis, its no surprise that 73 percent of marketers believe social media have an influence in persuading clients.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">In todays world, social media platforms are the most important tools for businesses and startups to connect with their customers, market their products, and publicize themselves. Social media networks may assist company increase revenue and generate leads.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-size: 18pt; font-family: arial, helvetica, sans-serif;\"><strong>Big Wave Development (BWD) and its plethora of activities</strong></span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">At BWD, WORK always starts with WHY. Technology has no chance against a missions passion in the battle for brand domination. That&rsquo;s the reason for existence of &ldquo;WHY&rdquo;, with purpose comes zeal, and zeal is what motivates us. What&rsquo;s your motivation?</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">Its no easy task to stand out in the crowded tech industry. We thrive to build unique and bold ideas as a part of work culture to penetrate <strong>social media marketing</strong> platform. We make relentless research to match up to your expectation.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">You get a thorough, well-rounded effort when you hire us for social media promotion. All programs are tailored to your specific requirements, but they all include the following:</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">Account Management Facility: Well handle all aspect of your social media advertising campaigns, starting with determining the best platforms for your target demographic and developing a customized approach. Give us your old campaigns to revamp, or well create new accounts for you.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">Innovative Technologies: Were always experimenting with new services and unique ideas to ensure that our clients have access to cutting-edge approaches before their competitors do.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">It would be silly to expect benefit from <strong>social media marketing</strong> overnight. Indeed, establishing a presence and demonstrating a ROI will most certainly take years. However, by using social media properly, it would help in developing long-term relationships that will outlast any advertisements yo&nbsp;u may run.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">Ad Creation and Testing: After identifying target audience, the next step would be to send message and match their suitability. The most important - and enjoyable - aspect of any <strong>social media marketing</strong> campaign is audience testing. To find the perfect client, you have to use umpteen data than you can think.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">Optimization: We provide testing offers, and develop landing pages for optimization services. Generating campaigns for higher leads is also a part of our work process.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">Updates and Reporting: We always monitor, and look for constant updates to pace up with the changing environment. This keeps us motivated to serve better.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">Be it any platform such as Facebook, LinkedIn, Instagram, and others, we always look to serve more and better for our clients. Well use the same adaptability to help you make the greatest decisions for your company based on your objectives.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">Be ready to fly high with us at 7901 4th ST N STE 8022, St. Petersburg, FL 33702 or call +1 727 300 6264 for further clarification.</span></p>","summary":"BWD can use social media advertising services and maximize a great return on your investment because of the depth and breadth of our knowledge and experience.","image":"amplify_business.jpg","date":"2022-05-27","slug":"amplify-business-through-social-media-marketing","view_count":11,"status":1,"meta_title":"Amplify business through social media marketing","meta_key":"Website Development, Software Development, Development, Site Development, CRM Development\t","meta_description":"BWD can use social media advertising services and maximize a great return on your investment because of the depth and breadth of our knowledge and experience.","url_handle":"undefined","created_by":"Mike Boggus","created_at":"2022-05-27","modified_at":"14-6-2022"},{"id":2,"category_id":"31","title":"Bank on New Techniques to Promote Gaming Website","content":"<p><span style=\"font-size: 18pt; font-family: arial, helvetica, sans-serif;\"><strong>Introduction</strong></span></p>\r\n<p><br><span style=\"font-family: arial, helvetica, sans-serif;\">Building an online gaming site requires flawless content, a market gap, and social media management. As the gaming community now has access to a wealth of knowledge, it is up to you to break through the ceiling and conquer the online world.</span></p>\r\n<p><br><span style=\"font-family: arial, helvetica, sans-serif;\">It&rsquo;s difficult to start a <strong>gaming website</strong>, but it may be quite beneficial, especially if you want to build a solid portfolio. Keeping up with current and upcoming gaming and technology innovations is the most effective way of addressing information demand.</span></p>\r\n<p><br><span style=\"font-size: 18pt; font-family: arial, helvetica, sans-serif;\"><strong>Ways to Promote</strong></span></p>\r\n<p><br><span style=\"font-family: arial, helvetica, sans-serif;\">There can be several ways that can be adapted to promote <strong>gaming websites</strong>. Some of them are: Optimization: There are a plethora of paid and free keyword research tools accessible online to assist you in your hunt for less competitive and high search volume keywords to employ in creating content and promoting your <strong>gaming website</strong>. Additionally, image optimization through the use of high-quality images will aid you in attracting a larger audience.</span></p>\r\n<p><br><span style=\"font-family: arial, helvetica, sans-serif;\">Social Media Campaigns: It includes campaigns on various social media platforms such as Facebook, Instagram, Twitter, and similar types. Almost everyone on the planet spends a considerable period every day on social media, so make sure your game website includes both Facebook and Instagram profiles.</span></p>\r\n<p><br><span style=\"font-family: arial, helvetica, sans-serif;\">Unique Content: There are numerous methods for creating original content. If you have the abilities, consider infusing your ideas and describing how it works through, which will help to increase the number of people that visit your<strong> gaming website</strong>. Discussing various topics related to winning strategies, latest features, and various upcoming contests can help draw participants. Brand Influencers: In today&rsquo;s environment, influencers are akin to celebrity endorsements. Having the proper individual advertise your <strong>gaming website</strong> to the right demographic can have a major impact on how well it performs, and this strategy can propel your website to new heights. It can attract more participation.</span></p>\r\n<p><br><span style=\"font-family: arial, helvetica, sans-serif;\">Trendy Approach: In the online gaming world, there&rsquo;s always something significant going on, and a new game challenge pops up every single day. Millions of players use search engines to locate solutions or whatever is trending as a result of these overnight escalating demands. Similarly, apps can be downloaded from play store and used to meet the demand of the gamers. Verbal Approach: Family and friends can be utilized through this mode as well. These are also key traffic sources for your site. Focus on building relationships with your subscribers and followers to acquire favorable feedback and referrals. You can also market your business by participating in relevant forums or leaving comments on relevant blog posts without coming across as overtly commercial.</span></p>\r\n<p><br><span style=\"font-size: 18pt; font-family: arial, helvetica, sans-serif;\"><strong>Conclusion</strong></span></p>\r\n<p><br><span style=\"font-family: arial, helvetica, sans-serif;\">It&rsquo;s fine to market your <strong>gaming website</strong> over the internet, and keep your branding consistent. You need to be immediately recognizable. Use the same color scheme, language, and voice tone as well as identical thumbnails. When it comes to branding, it&rsquo;s not just about the title and looks of your <strong>gaming website</strong>; it&rsquo;s about all of the advertising imagery as well. To ensure that people are familiar with you, your appearance, and your game website, put your brand on everything you do in your marketing effort.</span></p>","summary":"Developing new techniques to promote your gaming website can be helpful once you know the tricks.","image":"gaming_site_Techniques.jpg","date":"2022-05-26","slug":"bank-on-new-techniques-to-promote-gaming-website","view_count":4,"status":1,"meta_title":"Bank on New Techniques to Promote Gaming Website","meta_key":"Website Development, Software Development, Development, Site Development, CRM Development\t","meta_description":"Developing new techniques to promote your gaming website can be helpful once you know the tricks.","url_handle":"undefined","created_by":"Mick","created_at":"2022-05-26","modified_at":"12-6-2022"},{"id":3,"category_id":"31","title":"Benefits of Designing a Creative Gaming Website","content":"<p><span style=\"font-size: 18pt; font-family: arial, helvetica, sans-serif;\"><strong>Backdrop</strong></span></p>\r\n<p><br><span style=\"font-family: arial, helvetica, sans-serif;\">An online game is an activity that is played in part or entirely over the Internet or another computer network. It is not only restricted to video games, but includes gambling, betting, an other similar types as well.</span></p>\r\n<p><br><span style=\"font-family: arial, helvetica, sans-serif;\">Every year, the gaming industry releases hundreds of new games with improved user interfaces and design methods that provide a fulfilling and pleasurable user experience.</span></p>\r\n<p><br><span style=\"font-family: arial, helvetica, sans-serif;\">Websites for amusement are also established and updated, as this is the primary channel for promoting and showcasing games. Potential players can better comprehend and engage in it faster if the apparent view is interesting.</span></p>\r\n<p><br><span style=\"font-family: arial, helvetica, sans-serif;\">Gaming isn&rsquo;t just for pleasure, excitement, or entertainment. It also provides great benefits for people of all ages. As a result, it enhances memory and promotes rapid decision-making. Gaming can encourage players to take risks and endure in the face of failure, which can improve man&rsquo;s ability to deal with adversity.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-size: 18pt; font-family: arial, helvetica, sans-serif;\"><strong>How can the design of a gaming website help business KPIs?</strong></span></p>\r\n<p><br><span style=\"font-family: arial, helvetica, sans-serif;\">One can employ proper webpage blueprint as part of the marketing strategy for promoting the game. The internet site gives potential consumers their first view and helps them decide whether or not to test it. Existing players will have the opportunity to learn about some cool features that aren&rsquo;t immediately obvious in the game. This will keep them interested for a longer period.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-size: 18pt; font-family: arial, helvetica, sans-serif;\"><strong>Requisites for a creative gaming website</strong></span></p>\r\n<p><br><span style=\"font-family: arial, helvetica, sans-serif;\">First and foremost, you must choose who you want to reach. It is ineffective to blast commercials at everyone everywhere. The aims and objectives should be established after that. In a nutshell, all stakeholders must think about the goal of a creative design. Although this may appear selfevident, it is frequently overlooked. You may easily choose the format of the website after you&rsquo;ve answered all of these questions.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-size: 18pt; font-family: arial, helvetica, sans-serif;\"><strong>Website Design Agency Florida</strong></span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">Big Wave Development (BWD) works on several types of Creative Gaming Website Desig such as Stand-alone, Landing pages, and Reviews/Info sections.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">Stand-alone Creative Sites: Many online games are built indifferently with its purpose. Some of these may simply be promotional webpage created before the release. Gaming websites can also serve as a community platform in addition to storing content. Rich background imagery, clean text blocks, and plenty of white space allow the page to breathe and avoid being cluttered.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">Landing Pages: The website of a gaming studio or publisher is typically more corporate. One can find content about recruitment and investment, significant team members, studio legacies, game portfolios, and other topics.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">Review/Info Section: Gamers require updates just as much as everybody else does. Many information portals have been established to keep gamers informed about the latest developments in the video game industry. There you will find information on the most recent gaming events, gamer merchandise, and much more.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: arial, helvetica, sans-serif;\">The craftsmanship of the highly skilled technocrats of <strong>Website Design Agency Florida</strong> ensures to provide the very best for the clients.</span></p>","summary":"Get inspired by an appealing and innovative gaming design that can assist gamers in creating websites and creating customer base.\r\n","image":"gaming_website_design.jpg","date":"2022-05-25","slug":"benefits-of-designing-a-creative-gaming-website","view_count":1,"status":1,"meta_title":"Benefits of Designing a Creative Gaming Website","meta_key":"Website Development, Software Development, Development, Site Development, CRM Development\t","meta_description":"Get inspired by an appealing and innovative gaming design that can assist gamers in creating websites and creating customer base.\r\n","url_handle":"undefined","created_by":"Mick","created_at":"2022-05-25","modified_at":"12-6-2022"}]};
-    console.log("DATA BLOG3:",response.data);
-    this.blogList = response;
-    //this.getData();
-  },
-  methods:{
-
-     blogDetails(val){
-      //console.log("ALERT :", val);
-      //alert(val);
-        this.$router.push({
-        name: "blog-details",
-        params: { slug: val },
-      });
+  methods: {
+    blogDetails(val) {
+      if(!val) return;
+      this.$router.push({ name: "blog-details", params: { slug: val } });
     },
-    moveUp(){
-        window.scrollTo(0,0);
+    moveUp() {
+      window.scrollTo(0, 0);
     },
   }
-  
 });
 </script>
-
-<style>
-
-</style>

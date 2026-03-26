@@ -28,7 +28,7 @@
                                   <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0  1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
                       </div>
                       <div class="modalText">
-                          <h6>+1 678 608 2725</h6>
+                          <h6>+1(727) 300-6244</h6>
                       </div>
               </div>
               <div class="svgText">
@@ -61,7 +61,7 @@
                 <a href="https://twitter.com/BWD2008" class="btn">
                   <img src="frontend/images/icon/twi.svg" alt="">
                 </a>
-                <a href="https://www.linkedin.com/company/big-wave-development/about/" class="btn">
+                <a href="https://www.linkedin.com/company/bigwavedevelopment/" class="btn">
                   <img src="frontend/images/icon/link.svg" alt="">
                 </a>
                 <!-- <a href="https://works-reddensoft.com/bwd-new/" class="btn">
@@ -135,7 +135,7 @@
                               <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0  1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
                   </div>
                   <div class="modalText">
-                      <h6>+1 678 608 2725</h6>
+                      <h6>+1(727) 300-6244</h6>
                   </div>
                   </div>
                   <div class="svgText">
@@ -526,6 +526,7 @@ export default defineComponent({
           align-items: center;
           margin-right: 15px;
           border-radius: 50px;
+          padding: 0;
         }
         .icon-column .btn img  {
           display: block;

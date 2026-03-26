@@ -5,7 +5,7 @@ import NavBar from '../views/NavBar.vue'
 import ServicePage from '../views/ServicePage.vue'
 import BlogPage from '../views/BlogPage.vue'
 import ContactUs from '../views/ContactUs.vue'
-import BlogDetails from '../views/BlogDetails.vue'
+import BlogDetails from '../views/blog-page.vue'
 import OurTeam from '../views/OurTeam.vue'
 import FooTer from '../views/FooTer.vue'
 import TestimonialSite from '../views/TestimonialSite.vue'
@@ -27,6 +27,11 @@ import ThankYou from '../views/ThankYou.vue'
 import Portfolio from '../views/Portfolio.vue'
 import PortfolioDetails from '../views/PortfolioDetails.vue'
 import DigitalMarketing from '../views/DigitalMarketing.vue'
+import UnlimitedGraphicDesignPackages from '../views/UnlimitedGraphicDesignPackages.vue'
+import NotFound from '../views/404.vue'
+// import Pricing from '../views/Pricing.vue'
+// import MaintainancePricing from '../views/MaintainancePricing.vue'
+import Review from '../views/Review.vue'
 
 
 
@@ -35,6 +40,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'homepage',
     component: HomePage
+  },
+  {
+    path: '/unlimited-graphic-design-packages',
+    name: 'unlimitedgraphicdesignpackages',
+    component: UnlimitedGraphicDesignPackages
   },
   {
     path: '/about-us',
@@ -71,6 +81,24 @@ const routes: Array<RouteRecordRaw> = [
     name:'ourteam',
     component: OurTeam
   },
+  // {
+  //   path: '/design-development-pricing',
+  //   name:'pricing',
+  //   component: Pricing
+  // },
+  // {
+  //   path: '/maintainance-pricing',
+  //   name:'MaintainancePricing',
+  //   component: MaintainancePricing
+  // },
+
+
+{
+  path: '/review',
+  name:'Review',
+  component: Review
+},
+
   {
     path: '/footer',
     name: 'footer',
@@ -169,6 +197,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'portfolio-details',
     component: PortfolioDetails
   },
+  {
+    path: '/:pathMatch(.*)*',
+    name: '404',
+    component: NotFound
+  }
  
 ]
 

@@ -124,14 +124,14 @@
                     <div class="conInfoBox">
                         <img src="frontend/images/contact/Vector3.png">
                         <h3>Phone</h3>
-                        <p><a href="tel:+1 678 608 2725" style="color:white;cursor:pointer;">+1 678 608 2725</a></p>
+                        <p><a href="tel:+1(727) 300-6244" style="color:white;cursor:pointer;">+1(727) 300-6244</a></p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="conInfoBox">
                         <img src="frontend/images/contact/Vector4.png">
                             <h3>Skype</h3>
-                        <a href="https://join.skype.com/invite/tstWdtSTbJY6" style="color:white;cursor:pointer;"><p>bigwavedevelopment</p></a>
+                        <a href="skype:live:.cid.a09b161f62621ff1?chat" style="color:white;cursor:pointer;"><p>bigwavedevelopment</p></a>
                     </div>
                 </div>
             </div>

@@ -3,9 +3,9 @@
  <NavBar/>
   <!-- banner start here :style="{ color, fontSize: `${fontSize}px` }" -->
 
-     <div v-for="(blog) in details.data" v-bind:key="blog.id" :style="{'background-image':'url('+image_url+blog.image+')'}" class="banner-content banner-content-about bannerBackground" >
+     <div :style="{'background-image':'url('+blogDetails.article_image+')'}" class="banner-content banner-content-about bannerBackground" >
       <div class="hero-text bgText">
-        <h1><strong>{{blog.title}}</strong></h1>
+        <h1><strong>{{blogDetails.title}}</strong></h1>
         <!-- <p> We're Very Experience In Digital marketing  </p> -->
         <!-- <div class="hero-button-sctn">
          <button class="btn" @click="modelShow()">Let's Work Together</button>
@@ -30,12 +30,12 @@
           <div class="col-lg-8">
             <div class="content">
 
-              <div class="item" v-for="(blogDetailsss) in details.data" v-bind:key="blogDetailsss.id">
+              <div class="item">
                 <!-- <h5>Post by: Mike, Category: Social Media Marketing, Date: June 2022, 12</h5> -->
                 <!-- <div class="iteam_Box_Images">
                     <img :src="image_url+blogDetailsss.image" alt="">
                 </div> -->
-                <span class="mb-5" v-html="blogDetailsss.content"></span>
+                <span class="mb-5" v-html="blogDetails.description"></span>
                 <!-- <p class="mb-5">A logo typically reflects a company's name and purpose through visual features such as shapes, inscriptions, and images. In most cases, a good logo harmoniously incorporates all of these features. It's important to note, however, that a strong brand logo serves a purpose more than simply representing the agency. Also, with the correct strategic logo sketch, professionals can communicate their message or story through their logo. Users eventually associate a logo with the name. This creates a strong emotional connection with the brand, as well as brand recognition and trust.</p>
                 <p class="mb-5">Big Wave Development, a logo design company in Florida, has been creating logos for various organizations across the globe since its inception. Not only does it serves as the association's face, but it also emphasizes the brand's core objective. For both small and large organizations, the corporate world is a highly competitive domain. As a result, you should do everything necessary to keep your brand in the spotlight and increase its recognition. Having a professionally created logo that is aligned with your business concept is one of the finest ways to establish relevance and credibility.</p>
                 
@@ -73,7 +73,7 @@
                   </ul>
                 </nav>
                      <keep-alive>
-                        <component :is="currentTabComponent" ></component>
+                        <component :is="currentTabComponent" :blogData="currentTabComponent === 'PopularPage' ? popular_blog_data : recent_blog_data"></component>
                      </keep-alive>
               </div>
 
@@ -173,7 +173,7 @@
               <div class="cntct-btn">
                 <a href="#" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-               </svg>+1 678 608 2725</a>
+               </svg>+1(727) 300-6244</a>
               </div>
             </div>
            </div>
@@ -200,8 +200,8 @@ import NavBar from '../views/NavBar.vue'
 import PopularPage from '../views/PopularPage.vue'
 import RecentPage from '../views/RecentPage.vue'
 import PopUp from '../views/PopUp.vue'
-import { useRoute } from 'vue-router'
-import { BASE_URL_API,BASE_URL_API2 ,BASE_URL_IMAGE} from '../config'
+import { useRoute, useRouter } from 'vue-router'
+import { BASE_URL_API,BASE_URL_API2 ,BASE_URL_IMAGE, BASE_URL_API_DATA} from '../config'
 import axios from 'axios'
 import StayConectedWith from '../components/StayConectedWith.vue'
 
@@ -223,15 +223,17 @@ export default {
     data() {
         return {
             details:{},
+            blogDetails:{},
+            popular_blog_data:[],
+            recent_blog_data:[],
             currentTabComponent: "PopularPage",
             showPopup:false,
-            metaTitle:"Blog - "+this.metaTitle+" | Big Wave Development LLC",
-            metaDescription:this.metaDescription,
+            metaTitle:"Blog | Big Wave Development LLC",
+            metaDescription:'',
             successmessage:'',
             errormessage:'',
             buttonclick:false,
             emailField:'',
-            image_url:'',
             blogId:'',
             storageData: mirror,
             storage: storage,
@@ -241,32 +243,28 @@ export default {
         this.moveUp();
     },
     async created(){
-        //blogfind/by/slug/:slug
-        //localStorage.setItem('blogId', this.blogId)
-
-        //this.storage.set('blogId', this.blogId)
-
-        this.image_url = BASE_URL_IMAGE+'uploads/';
-        const route = useRoute();
-        const response = await axios.get(BASE_URL_API+'blog-details.php?slug='+route.params.slug);
-        // const response = await axios.get(BASE_URL_API2+'blogfind/by/slug/'+route.params.slug);
-        //this.imagepath=API_IMAGE_PATH
-        this.details = response.data;
-        //console.log("BLOG DETAILS: ",response.data);
-        //this.moveUp();
-        this.metaTitle = response.data.data[0]?.title;
-        this.metaDescription = response.data.data[0]?.content;
-        this.blogId = response.data.data[0]?.id;
-        this.storage.set('blogId', this.blogId)
-        //const response2 = await axios.get(BASE_URL_API2+'blog/popular/'+this.blogId);
-        //this.imagepath=API_IMAGE_PATH
-        //this.details2 = response2.data;
-        //console.log("BLOG POPULAR: ",response2.data);
-        //var storedData = localStorage.getItem('blogId');
-        //console.log("IIDDD:  ",storedData);
-        //console.log("IIDDD 22:  ",this.storage);
+        await this.fetchBlog(this.$route.params.slug);
+    },
+    watch: {
+        '$route'(to, from) {
+            if(to.params.slug && to.params.slug !== from.params.slug) {
+                this.fetchBlog(to.params.slug);
+            }
+        }
     },
     methods:{
+        async fetchBlog(slug) {
+            if(!slug) return;
+            window.scrollTo(0, 0);
+            const response = await axios.get(BASE_URL_API_DATA+'get_blog_details_by_slug?slug='+slug);
+            this.blogDetails = response.data.blog_data;
+            this.recent_blog_data = response.data.recent_blog_data;
+            this.popular_blog_data = response.data.popular_blog_data;
+            this.metaTitle = this.blogDetails.title + ' | Big Wave Development LLC';
+            this.metaDescription = this.blogDetails.description;
+            this.blogId = this.blogDetails.postID;
+            this.storage.set('blogId', this.blogId);
+        },
         modelShow(){
         //alert("HII",this.showPopup);
         this.showPopup=true;

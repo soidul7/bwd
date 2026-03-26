@@ -1,0 +1,321 @@
+.banner-bg h1,.pckg-btn{
+    line-height:64px;font-weight:500
+}
+.graphics .container .second-section.re-make_offer *,.price_new_section *,.sales-page.graphics,body{
+    font-family:Montserrat,sans-serif!important
+}
+.offer_reMake_section,.package-box,.ribbon{overflow:hidden} 
+.sales-page.graphics .banner-bg{
+    padding:230px 25px 80px;background:#e4f1fb;text-align:center; overflow: hidden; position: relative;
+}
+.banner-bg h1{ font-size:56px; display:table;margin:0 auto;letter-spacing:-2px}
+.Checkout-sec{ background-color: #e4f1fb;}
+.banner-bg h1 strong{ color: #009fda !important;}
+.banner-bg.unlimited_graphic_banner h1 span{ color: #000; border: dashed 1px #000; padding: 0 10px;}
+.banner-bg h1 span{ color: #009fda;}
+.sales-page.graphics.full-stack h1 span{ color: #009fda;}
+.banner-bg p{ font-size:28px;line-height:38px;padding-top:20px;font-family:Mulish,sans-serif}
+.title_colabr h2,.title_colabr p{ font-family:Montserrat,sans-serif}
+.title_colabr.package_heading h2{ color: #0052ff;}
+.banner-bg p span{font-weight:900}
+body{font-size:14px;}
+.header-part::after{content:unset}
+.pckg-btn{ background: #ffffff; 
+    border: 2px solid #4aa1e4; font-size: 24px;
+    padding: 0 48px; 
+    border-radius: 45px; 
+    display: inline-block; 
+    margin-top: 60px; 
+    color: #4aa1e4; cursor: pointer;
+}
+.pckg-btn:hover{ 
+    color: #ffffff;
+    background: #4aa1e4;
+}
+.sales-page.graphics .container .header-part .mail-box:hover{color:#000}
+.sales-page.graphics .container .header-part .mail-box:hover span img{filter:inherit}
+.sales-page.graphics .container .header-part .mail-box{background-color:#fff;border:none;box-shadow:2px 5px 10px rgba(0,0,0,.1)} 
+.Checkout-sec{padding-bottom:150px}
+.top-minus-space{margin-top:-200px}
+.package-box{width:31.333%;float:left;background-color:#fff;border-radius:20px;box-shadow:0 0 15px 0 rgba(0,0,0,.15);transition:background .3s,border .3s,border-radius .3s,box-shadow .3s;padding:45px 20px 35px;text-align:center;margin:0 1%;position:relative}
+.package-box h2 span,.price-text{background:#da6645;-webkit-text-fill-color:transparent}
+.package-list ul,.price-text{padding-top:20px}
+.package-box h2{font-size:28px;line-height:30px;padding-bottom:30px}
+.package-box h2 span{background:linear-gradient(to right,#da6645 0,#0b99ef 50%,#4922c2 100%);background-clip:border-box;-webkit-background-clip:text}
+.package-box p{font-size:16px;line-height:20px}
+.price-text{font-size:40px;line-height:52px;background:linear-gradient(to right,#da6645 0,#0b99ef 50%,#4922c2 100%);background-clip:border-box;-webkit-background-clip:text;font-weight:700;display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:center;align-items:center}
+.price-text span{font-size:20px;font-weight:400}
+.elementor-divider{margin-top:42px;padding-bottom:22px;border-top:1px solid #ccc}
+.package-list li{font-size:18px;line-height:24px;padding:0 0 10px 30px;background-image:url('../images/sales/sales-check.png');background-position:0 12px;background-repeat:no-repeat;background-size:15px;text-align:left}
+.package-list h3{font-size:30px;line-height:35px;text-align:left;padding:20px 0 0}
+.mst,.ribbon span,.talk-btn,.title_colabr{text-align:center}
+.talk-btn{background:#f75a1c;border:1px solid #f75a1c;border-radius:60px;color:#fff;display:block;font-size:18px;font-weight:400;letter-spacing:.3px;letter-spacing:1px;margin:20px 15px 0 0;padding:14px 40px;text-transform:uppercase}
+.talk-btn:hover{background-color:#0c72e6;border-color:#0c72e6}
+.mst{margin-bottom:20px;animation:1.3s linear infinite MoveUpDown;position:absolute;left:50%;top:0;transform:translateX(-50%)}
+.popular-pckg{position:relative;padding-top:100px}
+@keyframes MoveUpDown{
+    0%,100%{top:0}
+    50%{top:10px;opacity:.5}
+}
+.price-text del{padding-right:5px;-webkit-text-fill-color:red}
+.extra-space{margin-top:100px!important}
+.package-box.second_package-box{border:6px solid #f5e4a0!important;background:#fbfdd4}
+.sales-page.graphics .logos .slick-initialized .slick-slide>div{border:1px solid #dbdbdb;border-radius:5px}
+.ribbon{width:150px;height:150px;position:absolute}
+.ribbon::after,.ribbon::before{position:absolute;z-index:-1;content:'';display:block;border:5px solid #2980b9}
+.ribbon span{position:absolute;display:block;width:225px;padding:10px 0;background-color:#f75a1c;box-shadow:0 5px 10px rgba(0,0,0,.1);color:#fff;font-size:14px;text-transform:uppercase;font-weight:700}
+.ribbon-top-left{top:-18px;left:-18px}
+.ribbon-top-left::after,.ribbon-top-left::before{border-top-color:transparent;border-left-color:transparent}
+.ribbon-top-left::before{top:0;right:0}
+.ribbon-top-left::after{bottom:0;left:0}
+.ribbon-top-left span{right:-25px;top:38px;transform:rotate(-45deg)}
+.sales-page.graphics .container .second-section .gradeint-box,.sales-page.graphics .container .second-section .offer-box{position:relative;z-index:9}
+.sales-page.graphics .gradeint-box::before{position:absolute;right:0;width:200vh;height:100%;top:0;bottom:0;background:#d72e36;content:"";z-index:-1}
+.sales-page.graphics .container .second-section .offer-box::before{position:absolute;left:0;width:200vh;height:100%;top:0;bottom:0;background:#000;content:"";z-index:-1}
+.sales-page .container .slider-section .slider-image img{width:auto!important;max-width:100%;height:auto;vertical-align:middle;border-radius:5px}
+.slick-slide{padding:0 10px}
+.package-list ul.deactive-list li{background:0 0;padding-left:0;color:#c6c6c6}
+.package-list ul.deactive-list li svg{margin-right:14px}
+.package-list ul.deactive-list{padding-top:0}
+.header_right{display:flex}
+
+.header_right a+a span{color:#fff} 
+.mb-dspn{display:none}
+
+
+.blue_round_banner{ width: 400px; height: 400px; background-color: #199ad6; border-radius: 100%; position: absolute; top: -200px; right: -80px; z-index:1;}
+.blue_round_banner2{ width: 150px; height: 150px; background-color: #199ad6; border-radius: 100%; position: absolute; bottom:0; left: -30px;}
+.blue_round_banner3{ width: 60px; height: 60px; background-color: #e6eff6; border-radius: 100%; position: absolute; bottom:200px; left: 50px; left: 40px; border: 6px solid #6ec0ff;}
+.blue_round_banner4{ width:100px; height:100px; background-color: #e6eff6; border-radius: 100%; position: absolute; top:200px; right: 40px; border: 4px solid #199ad6;}
+
+.sales-page .container .header-part{ position: relative !important; z-index: 9 !important;}
+
+@media (max-width:1200px){
+    .package-box h2{font-size:28px;line-height:33px}
+}
+@media (max-width:1024px){
+    .banner-bg h1{font-size:60px;line-height:65px}
+    .banner-bg p{font-size:30px;line-height:35px}
+    .package-box{width:98%;float:none;margin-top:20px} 
+.top-minus-space{margin-top:-156px}
+}
+@media (max-width:740px){
+    .banner-bg h1{font-size:27px;line-height:34px}
+    .banner-bg p{font-size:17px;line-height:23px}
+    .package-box{padding:45px 20px 35px}
+    .mb-dspn{display:none}
+    .mst.mb-dspb{position:inherit;display:table;left:inherit;top:inherit;margin:48px auto 0;text-align:center;transform:none} 
+.price_new_section .price__title{margin-bottom:20px}
+}
+.title_colabr{padding:60px 0}
+.title_colabr h2{font-size:64px;line-height:normal;color:#0052ff;font-weight:800;margin-bottom:7px;}
+.title_colabr p{font-size:36px;line-height:30px;color:#000;font-weight:400} 
+.sales-page .slider-section .inside_title{display:flex;align-items:center} 
+.sales-page .slider-section .inside_title::after{
+    content:'';
+    flex-grow:1;
+    border-bottom:1px solid #a7a7a7;
+    display:block;
+    width:10%;
+    margin-left:10px;
+    visibility:visible
+} 
+.sales-page .slider-section .inside_title h3{text-align:left;flex-shrink:0} 
+.graphics .container .second-section.re-make_offer .offer_thmbl{position:absolute;top:260px;left:50%;transform:translateX(-50%);width:170px;z-index:99} 
+.graphics .header-top{position:absolute;left:0;right:0;width:100%;top:0} 
+.sales-page.graphics .container .second-section .gradeint-box,.sales-page.graphics .container .second-section .offer-box{max-width:50%;width:auto;flex:0 0 50%} 
+.graphics .container.offer_reMake_section{padding:0} 
+.graphics .container .second-section .gradeint-box{display:flex;align-items:center;justify-content:center;background:#d72e36!important} 
+.graphics .container .second-section.re-make_offer .gradeint-box .ttx{max-width:586px;margin:auto} 
+.graphics .container .second-section.re-make_offer .gradeint-box h3{font-size:36px;line-height:96px;color:#fff;font-weight:400;text-align:center;max-width:440px;margin:auto} 
+.graphics .container .second-section.re-make_offer .gradeint-box h3 span{text-align:center;display:block;border:1px dashed #ddd;line-height:normal;padding:8px 0 14px} 
+.graphics .container .second-section.re-make_offer .gradeint-box h2{font-size:80px;letter-spacing:-1px;line-height:normal;text-transform:uppercase;color:#fff;font-weight:700;padding:0;border:none;text-align:center;margin:26px 0 40px} 
+.graphics .container .second-section.re-make_offer .gradeint-box p{font-size:23px;letter-spacing:1px;line-height:34px;color:#fff;font-weight:300;text-align:center;padding:0;max-width:initial} 
+.graphics .container .second-section.re-make_offer .gradeint-box p span{background:#c11825;padding:5px 12px;margin-top:5px;display:inline-block} 
+.graphics .container .second-section.re-make_offer .offer-box{background-color:#000;border:none} 
+.graphics .container .second-section.re-make_offer .offer-box h3{font-size:127px;letter-spacing:-1px;line-height:normal;color:#fff;font-weight:700} 
+.graphics .container .second-section.re-make_offer .offer-box .top_ttle{display:flex;align-items:center;justify-content:center} 
+.graphics .container .second-section.re-make_offer .offer-box .top_ttle span{font-size:40px;letter-spacing:0;line-height:48px;color:#c83733;font-weight:700;background-color:#fff;width:112px;height:112px;text-align:center;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;text-transform:uppercase;margin-left:14px} 
+.graphics .container .second-section.re-make_offer .offer-box h6{font-size:36px;letter-spacing:1px;line-height:48px;color:#fff;font-weight:700} 
+.graphics .container .second-section.re-make_offer .btn-outline-blue{
+    font-size:26px;
+    line-height:30px;
+    color:#fff;
+    font-weight:500!important;
+    background:linear-gradient(90deg,#60439a 0,#c53244 100%);
+    border-radius:50px;
+    border:none;
+    padding:18px 44px;
+    margin-top:30px
+} 
+.graphics .container .second-section.re-make_offer .offer-box .time-count-box p{font-size:21px;letter-spacing:4px;line-height:30px;color:#fff;font-weight:250;padding-bottom:0} 
+.graphics .container .second-section.re-make_offer .offer-box .time-count-box .time-count h3{font-size:26px;letter-spacing:5px;line-height:normal;color:#fff;font-weight:300;align-items:center;padding-top:0} 
+.graphics .container .second-section.re-make_offer .offer-box .time-count{margin-top:-8px} 
+.graphics .container .second-section.re-make_offer .offer-box .time-count-box .time-count h3>*{margin-top:36px} 
+.graphics .container .second-section.re-make_offer .offer-box .time-count-box .time-count h3 span{font-size:26px;letter-spacing:5px;line-height:30px;color:#fff;font-weight:250} 
+.graphics .container .second-section.re-make_offer .offer-box .time-count-box .time-count h3 span .text{font-size:18px;letter-spacing:2px;line-height:30px;color:#c83733;font-weight:500} 
+.price_new_section{margin-top:130px} 
+/* .price_new_section .price__title{margin-bottom:90px}  */
+.graphics .testmonial-section.testmonial-section_neo .testmonial-top h4,.price_new_section .price__title h2{font-size:72px;letter-spacing:-2px;line-height:normal;color:#000;font-weight:600;text-align:center} 
+.graphics .testmonial-section.testmonial-section_neo .testmonial-top h4 span,.price_new_section .price__title h2 span{background:#121fcf;background:linear-gradient(to right,#121fcf 0,#cf1512 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700} 
+.price_new_section .packages{display:flex;flex-wrap:wrap} 
+.price_new_section .popular-pckg .package-box{position:relative;border:1px solid #c7c7c7;box-shadow:none;display:flex;flex-direction:column} 
+.price_new_section .popular-pckg .package-box::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:320px;height:7px} 
+.price_new_section .popular-pckg .package-box h2{font-size:35px;line-height:43px;font-weight:800;text-align:center} 
+.price_new_section .popular-pckg .package-box h2 span{color:inherit;-webkit-text-fill-color:unset;background:unset} 
+.price_new_section .popular-pckg .package-box p{font-size:20px;line-height:30px;color:#403f3f;font-weight:500} 
+.price_new_section .popular-pckg .package-box .price-text{flex-wrap:wrap;font-weight:500;font-size:72px;background:unset;padding:8px 0 0} 
+.price_new_section .popular-pckg .package-box .price-text del{width:100%;display:block;font-size:26px;color:#858585;font-weight:500;text-align:center;margin-bottom:6px;-webkit-text-fill-color:initial} 
+.price_new_section .popular-pckg .package-box .price-text span{font-size:24px;font-weight:500;text-align:center} 
+.price_new_section .popular-pckg .package-box .package-list{margin-top:20px} 
+.price_new_section .popular-pckg .package-box .package-list h3{border-top:1px solid #adadad;border-bottom:1px solid #adadad;font-size:21px;letter-spacing:1px;line-height:48px;text-transform:uppercase;color:#000;font-weight:700;padding:0;margin:20px 0} 
+.price_new_section .popular-pckg .package-box .package-list li{font-size:18px;letter-spacing:.5px;color:#5a5a5a;font-weight:500;line-height:30px;background-repeat-x:no-repeat;background-image:url('../images/sales/sales-check_green.png')} 
+.price_new_section .popular-pckg .package-box .package-list .deactive-list li{background-repeat-y:no-repeat;background-image:unset;color:#c6c6c6} 
+.price_new_section .popular-pckg .package-box .package-list .deactive-list li svg,.price_new_section .popular-pckg .package-box .package-list .deactive-list li svg path{fill:#C73331} 
+.price_new_section .popular-pckg .package-box .btm-grp{margin-top:auto;display:flex;align-items:center;padding-top:26px; justify-content: center;} 
+.price_new_section .popular-pckg .package-box .btm-grp .talk-btn{font-size:23px;letter-spacing:0;line-height:30px;color:#fff;font-weight:700;text-align:center;margin:0;border:none;padding:14px 38px 11px} 
+.price_new_section .popular-pckg .package-box .btm-grp .org-page{font-size:15px;letter-spacing:1px;line-height:30px;color:#000;font-weight:700;display:inline-block;text-align:center;text-decoration:underline;margin:auto} 
+.price_new_section .popular-pckg .first_package-box{background-color:#f8f8f8} 
+.price_new_section .popular-pckg .package-box .price-text,.price_new_section .popular-pckg .package-box h2 span{-webkit-text-fill-color:unset} 
+.price_new_section .popular-pckg .first_package-box .btm-grp .talk-btn,.price_new_section .popular-pckg .first_package-box::before{background-color:#c73331} 
+.price_new_section .popular-pckg .first_package-box .price-text,.price_new_section .popular-pckg .first_package-box h2{color:#b93a2d} 
+.price_new_section .popular-pckg .second_package-box .btm-grp .talk-btn,.price_new_section .popular-pckg .second_package-box::before{background-color:#d19d00}
+.price_new_section .popular-pckg .second_package-box .price-text,.price_new_section .popular-pckg .second_package-box h2{color:#d19d00}
+.price_new_section .popular-pckg .third_package-box .btm-grp .talk-btn,.price_new_section .popular-pckg .third_package-box::before{background-color:#3384a0}
+.price_new_section .popular-pckg .third_package-box .price-text,.price_new_section .popular-pckg .third_package-box h2{color:#3384a0}
+.package-box.third_package-box{background:#f8f8f8}
+.testmonial-section_neo .top_head{text-align:center}
+.testmonial-section_neo .top_head img{margin:auto auto 30px;display:block;width:58px}
+.testmonial-section_neo .top_head h3{
+    font-size:34px;letter-spacing:0;line-height:51px;color:#000;font-weight:400;font-family:'Patua One',cursive;font-style:italic
+}
+.sales-page.graphics .testmonial-section .testmonial-grid .testmonial-box{background:#fff;border-radius:35px;border:1px solid #dadada;box-shadow:0 0 20px rgba(0,0,0,.1);padding:50px}
+.graphics .testmonial-section.testmonial-section_neo .testmonial-grid .testmonial-box .des{font-size:19px;letter-spacing:0;line-height:35px;color:#000;text-align:center;font-family:Mulish,sans-serif} 
+.graphics .testmonial-section.testmonial-section_neo .testmonial-grid .testmonial-box .testmonial-user .testmonial-user-image{width:100px;height:100px} 
+.graphics .testmonial-section.testmonial-section_neo .testmonial-grid .testmonial-box .testmonial-user .testmonial-user-details>*{flex-wrap:wrap;align-items:center;}
+.graphics .testmonial-section.testmonial-section_neo .testmonial-grid .testmonial-box .testmonial-user .testmonial-user-details h4{font-size:21px;letter-spacing:0;line-height:35px;color:#2c65c1;font-weight:700;padding:3px 10px 3px 3px;font-family:Mulish,sans-serif}
+.graphics .testmonial-section.testmonial-section_neo .testmonial-grid .testmonial-box .testmonial-user .testmonial-user-details h6{font-size:18px;letter-spacing:0;line-height:normal;color:#000;padding:3px;font-family:Mulish,sans-serif}
+.graphics.testmonial-section.testmonial-section_neo .testmonial-grid .testmonial-box{border:1px solid #dadada;background:#fff;box-shadow:2px 4px 20px #48484838;border-radius:50px}
+.graphics .testmonial-section.testmonial-section_neo .testmonial-lg-box{display:flex;align-items:center;margin-bottom:138px}
+.graphics .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-image{width:280px;height:280px;flex-shrink:0;border-radius:50%;overflow:hidden;margin-top:78px}
+.graphics .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-image img{width:100%;height:100%;object-fit:cover}
+.graphics .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-details{padding:0 40px 0 80px}
+.graphics .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-details .des{font-size:32px;letter-spacing:0;line-height:50px;color:#000;text-align:center;font-family:Mulish,sans-serif;font-style:italic}
+.sales-page.graphics .testmonial-section{padding-bottom:0}
+.graphics .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-details .top_head{margin-bottom:30px}
+.graphics .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-details .top_head h3{font-size:50px;letter-spacing:0;color:#000;font-weight:400;font-style:italic}
+.sales-page .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-details .top_head img{max-width:100%}
+.graphics .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-details .profn_dtl{display:flex;align-items:center;justify-content:center;margin-top:30px}
+.graphics .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-details .profn_dtl h4{font-size:24px;letter-spacing:0;line-height:51px;color:#2c65c1;font-weight:700;padding:3px}
+.graphics .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-details .profn_dtl h6{font-size:21px;letter-spacing:0;line-height:51px;color:#000;padding:3px 3px 3px 20px}
+.graphics .testmonial-section.testmonial-section_neo .testmonial-top{margin-bottom:56px}
+.graphics .testmonial-section.testmonial-section_neo{padding-top:160px}
+.graphics .testmonial-section.testmonial-section_neo.box-testi{
+    padding:0 0 90px;
+    background:url('../images/sales/grdnt.jpg') center repeat-x
+}
+.graphics .testmonial-section .testmonial-grid .testmonial-box .testmonial-user{
+    margin-top:30px
+}
+@media (max-width:1440px){
+    .price_new_section .popular-pckg .package-box h2{font-size:27px;line-height:29px}
+    .price_new_section .popular-pckg .package-box p{font-size:18px;line-height:20px}
+    .price_new_section .popular-pckg .package-box .price-text{font-size:50px}
+    .price_new_section .popular-pckg .package-box .btm-grp .talk-btn{font-size:18px;letter-spacing:0;line-height:30px;color:#fff;font-weight:700;text-align:center;margin:0;border:none;padding:10px 30px}
+    .price_new_section .popular-pckg .package-box .package-list li{font-size:14px}
+}
+    @media (max-width:1024px){
+        .graphics .container .second-section.re-make_offer .offer_thmbl{
+            position:absolute;top:14px;left:inherit;transform:none;width:151px;margin:0 auto -48px;right:0
+        }
+        .extra-space{margin-top:10px!important}
+    }
+    @media (max-width:740px){
+        .price_new_section .price__title h2{font-size:32px;line-height:38px}
+        .price_new_section{margin-top:30px}
+        .graphics .testmonial-section.testmonial-section_neo .testmonial-lg-box{flex-wrap:wrap;margin-bottom:0}
+        .sales-page .testmonial-section.testmonial-section_neo .testmonial-top h4{font-size:30px;line-height:34px}
+        .sales-page .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-image{margin:0 auto 15px}
+        .sales-page .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-details{padding:10px}
+        .sales-page .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-details .des{
+            font-size:20px;letter-spacing:0;line-height:33px
+        }
+        .sales-page .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-details .profn_dtl{
+            flex-wrap:wrap
+        }
+        .sales-page .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-details .profn_dtl h6{
+            line-height:21px
+        }
+        .sales-page .testmonial-section.testmonial-section_neo .testmonial-grid .testmonial-box .testmonial-user .testmonial-user-image{
+            margin:0 auto
+        }
+        .sales-page .testmonial-section.testmonial-section_neo .testmonial-grid .testmonial-box .testmonial-user .testmonial-user-details h6{
+            text-align:center
+        }
+        .sales-page .testmonial-section.testmonial-section_neo .testmonial-grid .testmonial-box .testmonial-user .testmonial-user-details>.sales-page2 .testmonial-section.testmonial-section_neo .testmonial-grid .testmonial-box .testmonial-user .testmonial-user-details>*{
+            justify-content:center
+        }
+        .sales-page .testmonial-section.testmonial-section_neo .testmonial-grid .testmonial-box .des{font-size:17px}
+        .sales-page.graphics .container .second-section .gradeint-box,.sales-page.graphics .container .second-section .offer-box{
+            max-width:100%;width:auto;flex:0 0 100%
+        }
+        .graphics .testmonial-section.testmonial-section_neo{padding-top:80px}
+        .sales-page.graphics .container .second-section .offer-box::before,.sales-page.graphics .gradeint-box::before{content:unset}
+        .sales-page.graphics .banner-bg{padding-top:200px}
+        .banner-bg h1{font-size:25px}
+        .price_new_section .price__title{margin-bottom:20px}
+        .title_colabr h2{font-size:30px;line-height:37px}
+    }
+    @media (max-width:575px){
+        .sales-page .container .header-part{flex-wrap:wrap;justify-content:center}
+        .header_right{margin-top:10px}
+        .package-box h2{font-size:24px;line-height:28px}
+        .banner-bg h1,.price_new_section .popular-pckg .package-box h2,.title_colabr p{font-size:25px}
+        .package-list li{font-size:16px}
+        .banner-bg{padding:50px 15px 100px}
+        .sales-page .container .second-section .gradeint-box h2{font-size:34px}
+        .popular-pckg{padding-top:50px}
+        .pckg-btn{font-size:20px;line-height:58px;padding:0 45px}
+        .top-minus-space{margin-top:-100px}
+        .slider-sec-total{padding:20px 0}
+        .title_colabr h2{font-size:44px}
+        .sales-page .container .second-section.re-make_offer .gradeint-box h3{
+            font-size:30px
+        }
+        .sales-page .container .second-section.re-make_offer .gradeint-box h2{
+            font-size:42px
+        }
+        .sales-page .container .second-section.re-make_offer .offer-box h3{
+            font-size:60px
+        }
+        .sales-page .container .second-section.re-make_offer .offer-box h6{
+            font-size:20px
+        }
+        .sales-page .container .second-section.re-make_offer .btn-outline-blue{
+            font-size:19px
+        }
+        .sales-page .container .second-section.re-make_offer .offer_thmbl{
+            position:inherit;
+            top:inherit;
+            left:inherit;
+            transform:none;
+            width:151px;
+            margin:0 auto -48px;
+            right:0
+        }
+        .sales-page .container .second-section.re-make_offer .gradeint-box p{
+            font-size:18px;letter-spacing:1px;line-height:23px
+        }
+        .graphics .testmonial-section.testmonial-section_neo .testmonial-lg-box .testmonial-user-details .top_head h3{
+            line-height:30px;font-size:28px
+        }
+        .sales-page.graphics .testmonial-section .testmonial-grid .testmonial-box{
+            padding:20px
+        }
+        .graphics .testmonial-section.testmonial-section_neo .testmonial-grid .testmonial-box .testmonial-user .testmonial-user-details>*{
+            justify-content:center
+        }
+        .testmonial-section_neo .top_head h3{
+            font-size:27px
+        }
+}

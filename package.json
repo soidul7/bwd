@@ -1,5 +1,5 @@
 {
-  "name": "bwd-new",
+  "name": "Big-Wave-Development-App",
   "version": "0.1.0",
   "private": true,
   "homepage": "./",
@@ -11,10 +11,14 @@
     "@syncfusion/ej2-vue-dropdowns": "^20.1.52",
     "@vuelidate/core": "^2.0.0-alpha.41",
     "@vuelidate/validators": "^2.0.0-alpha.29",
+    "@vueuse/integrations": "^10.2.1",
     "axios": "^0.27.2",
+    "caniuse-lite": "^1.0.30001600",
+    "cookies": "^0.8.0",
     "core-js": "^3.8.3",
     "register-service-worker": "^1.7.2",
     "the-storages": "^1.0.4",
+    "universal-cookie": "^4.0.4",
     "vue": "^3.2.13",
     "vue-accordion-menu": "^0.1.46",
     "vue-class-component": "^8.0.0-0",
@@ -22,7 +26,7 @@
     "vue-moment": "^4.1.0",
     "vue-plain-pagination": "^0.3.0",
     "vue-router": "^4.0.3",
-    "vue3-carousel": "^0.1.38",
+    "vue3-carousel": "^0.1.48",
     "vuex": "^4.0.0"
   },
   "devDependencies": {

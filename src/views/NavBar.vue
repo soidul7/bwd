@@ -3,7 +3,7 @@
         <div class="container">
           
               <router-link  class="navbar-brand" exact-active-class="active" to="/"  @click="moveUp">
-              <img src="/frontend/images/logo/logo.png" alt="">
+              <img src="frontend/images/logo/logo.png" alt="">
               </router-link>
           <button class="navbar-toggler" :class="{open:!openHide}" type="button" id="toggler-navbar" @click="navTggBtn()"></button>
           <div class="collapse navbar-collapse" :class="{show:!showClass}" id="collapseNavSide">

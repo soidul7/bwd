@@ -646,7 +646,7 @@
         <div class="container">
           <div class="content-ftr">
             <div class="text">
-              <h6>Copyright @2022 <span> Big Wave Development</span> All Rights Reserved.</h6>
+              <h6>Copyright @2024 <span> Big Wave Development</span> All Rights Reserved.</h6>
             </div>
             <div class="text-min">
               <a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a> </div>
@@ -675,8 +675,9 @@
             return {
             currentTabComponent: "PopularPage",
             };
-        },
+        }
         };
+
 </script>
 
 <style scoped>
