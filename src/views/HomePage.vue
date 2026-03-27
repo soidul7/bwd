@@ -2,14 +2,12 @@
     <MetaTag :title="title" :description="description"/>
     <NavBar/>
 
-     <div class="banner-content" style="background-image: url('https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?cs=srgb&dl=pexels-andre-furtado-1264210.jpg&fm=jpg');">
+     <div class="banner-content banner-style-nw" style="background-image: url('frontend/images/banner/banner-nw.jpg');">
       <div class="hero-text">
         <h2><strong>Evolve Better As You Grow Bigger</strong></h2>
         <p>Set Digital Trends With Precision</p>
         <div class="hero-button-sctn">
-         
            <button class="btn" @click="modelShow()">Let's Work Together</button>
-         
         </div>
       </div>
       <div class="shape-float">
@@ -1766,10 +1764,35 @@ video{
     color: #000;
 }
 
+.banner-style-nw{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-style-nw::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #000000a1;
+}
+.banner-style-nw .hero-text{
+    position: relative;
+    z-index: 1;
+}
+.banner-style-nw .hero-text h2{
+    color: #FFFFFF;
+}
+.banner-style-nw .shape-float img{
+    z-index: 2;
+}
+.banner-style-nw.banner-content .hero-text .hero-button-sctn{
+    background-image: unset;
+}
 /* Contact Section end  */
-
-
-
 
 
 /* ================== responsive home page start ========================= */
@@ -2101,6 +2124,20 @@ video{
     .proven-section .heading-title {
         margin: 0 auto 50px;
     }
+    .banner-style-nw{
+        margin-top: 60px;
+        padding: 120px 0 80px;
+    }
+    .banner-style-nw.banner-content .hero-text .hero-button-sctn{
+        height: auto;
+        margin-bottom: 0;
+    }
+    .banner-style-nw.banner-content .hero-text p {
+        margin: 20px 0 48px;
+    }
+    .banner-style-nw.banner-content .hero-text {
+        margin: 0;
+    }
 }
 @media (max-width: 767px) {
     
@@ -2263,6 +2300,12 @@ video{
     .contact-section .fild-cnt [type="submit"] {
         font-size: 17px;
         padding: 8px 0;
+    }
+    .banner-style-nw.banner-content .hero-text p {
+        margin: 20px 0 35px;
+    }
+    .banner-style-nw {
+        padding: 50px 0 58px;
     }
 }
 @media (max-width: 576px) {

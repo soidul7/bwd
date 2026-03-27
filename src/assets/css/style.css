@@ -405,3 +405,62 @@ ul,li{
 .all_php_project .slick-next{
   right: -25px;
 }
+
+.blog-dtl-sect h1,
+.blog-dtl-sect h2,
+.blog-dtl-sect h3,
+.blog-dtl-sect h4,
+.blog-dtl-sect h5,
+.blog-dtl-sect h6,
+.blog-dtl-sect p,
+.blog-dtl-sect ul,
+.blog-dtl-sect ol,
+.blog-dtl-sect dl{
+  margin-bottom: 15px;
+}
+.blog-dtl-sect hr{
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.blog-dtl-sect li+li{
+  margin-top: 10px;
+}
+.blog-dtl-sect ul,
+.blog-dtl-sect ol,
+.blog-dtl-sect dl{
+  padding-left: 20px;
+}
+.blog-dtl-sect h1,
+.blog-dtl-sect h2,
+.blog-dtl-sect h3,
+.blog-dtl-sect h4,
+.blog-dtl-sect h5,
+.blog-dtl-sect h6,
+.blog-dtl-sect p,
+.blog-dtl-sect ul,
+.blog-dtl-sect ol,
+.blog-dtl-sect dl,
+.blog-dtl-sect li{
+  line-height: 1.4;
+}
+.blog-news-sect .card-item>img:first-child{
+  height: 268px;
+  object-fit: cover;
+}
+
+@media (max-width: 1199px){
+  .blog-news-sect .card-item>img:first-child{
+    height: 180px;
+  }
+}
+@media (max-width: 991px){
+  .blog-news-sect .card-item>img:first-child{
+    height: 134px;
+  }
+}
+@media (max-width: 767px){
+  .blog-news-sect .card-item>img:first-child {
+    height: auto;
+    max-height: 280px;
+  }
+}
