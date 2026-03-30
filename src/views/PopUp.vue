@@ -188,7 +188,7 @@
 <script>
 
 import { defineComponent } from 'vue';
-import { BASE_URL_API } from '../config'
+import { BASE_URL_API, BASE_URL_API_DATA } from '../config'
 import { reactive, computed } from "vue"
 import useValidate from "@vuelidate/core"
 import { required, email, minLength, maxLength } from "@vuelidate/validators"
@@ -209,7 +209,7 @@ export default defineComponent({
           return {
               name: { required },
               email: { required, email },
-              phone: { required, minLength: minLength(10), maxLength: maxLength(12) },
+              phone: { minLength: minLength(10), maxLength: maxLength(12) },
               message: { required },
           }
       })
@@ -239,7 +239,7 @@ export default defineComponent({
         this.v2$.$validate()
         if (!this.v2$.$error) {
           //this.$router.push("/thank-you");
-          await axios.post(BASE_URL_API+'get-in-touch.php',
+          await axios.post(BASE_URL_API_DATA+'get_in_touch_submit_data',
             {
                 name: this.state2.name,
                 email: this.state2.email,
@@ -248,15 +248,22 @@ export default defineComponent({
             })
             .then((response) => {
               console.log("DATA :",response);
-                if (response.data.result == 'success') {
-                    this.state2= {};
+                if (response.data.status == 'success') {
+                    this.state2.name = '';
+                    this.state2.email = '';
+                    this.state2.phone = '';
+                    this.state2.message = '';
+                    this.v2$.$reset();
                     this.errormessage = '';
-                    this.successmessage = response.data.messase;
+                    this.successmessage = response.data.msg;
                     this.buttonclick = false;
+                    if (this.callback) {
+                        this.callback();
+                    }
                     this.$router.push("/thank-you");
                 } else {
                     this.successmessage = '';
-                    this.errormessage = response.data.messase;
+                    this.errormessage = response.data.msg;
                     this.buttonclick = false;
                 }
 

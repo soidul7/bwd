@@ -156,7 +156,7 @@
 
 <script>
   import { defineComponent } from 'vue';
-  import { BASE_URL_API } from '../config'
+  import { BASE_URL_API, BASE_URL_API_DATA } from '../config'
   import axios from 'axios'
   export default defineComponent({
     name: 'FooTer',
@@ -178,20 +178,24 @@
 
           if (this.emailField) {
               //console.log("TEXTIF");
-              await axios.post(BASE_URL_API+'newsletter.php',
+              await axios.post(BASE_URL_API_DATA+'newsletter-subscribe',
               {
                   email: this.emailField
               })
               .then((response) => {
                 console.log("DATA EMAIL:",response);
-                  if (response.data.result == 'success') {
-                      this.emailField= '';
+                  if (response.data.status == 'success') {
+                      this.emailField = '';
                       this.errormessage = '';
-                      this.successmessage = 'You have successfully subscribed to the newsletter.';
+                      this.successmessage = response.data.msg;
+                      this.buttonclick = false;       
+                  } else if (response.data.status == 'error') {
+                      this.successmessage = '';
+                      this.errormessage = response.data.msg;
                       this.buttonclick = false;       
                   } else {
                       this.successmessage = '';
-                      this.errormessage = 'Somthing went wrong';
+                      this.errormessage = 'Something went wrong';
                       this.buttonclick = false;       
                   }
 

@@ -174,7 +174,7 @@
 
 <script>
 import MetaTag from '../components/MetaTag.vue'
-import { BASE_URL_API } from '../config'
+import { BASE_URL_API, BASE_URL_API_DATA } from '../config'
 import { defineComponent } from 'vue';
 import NavBar from '../views/NavBar.vue'
 //import PopUp from '../views/PopUp.vue'
@@ -214,7 +214,7 @@ export default defineComponent({
               fname: { required },
               lname: { required },
               email: { required, email },
-              phone: { required, minLength: minLength(10), maxLength: maxLength(12) },
+              phone: { minLength: minLength(10), maxLength: maxLength(12) },
               subject: { required },
               website: { required ,url},
               message: { required },
@@ -276,7 +276,7 @@ export default defineComponent({
             //axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
             //http://executiveprotectionlifestyle.epspecialist.com/admin/contactus-form
             //php_bwd_emai.php
-            await axios.post(BASE_URL_API+'contactus-form.php',
+            await axios.post(BASE_URL_API_DATA+'contact_form_submit_data',
             {
                 fname: this.state3.fname,
                 lname: this.state3.lname,
@@ -288,15 +288,22 @@ export default defineComponent({
             })
             .then((response) => {
               console.log("DATA :",response);
-                if (response.data.result == 'success') {
-                    this.state3= {};
+                if (response.data.status == 'success') {
+                    this.state3.fname = '';
+                    this.state3.lname = '';
+                    this.state3.email = '';
+                    this.state3.phone = '';
+                    this.state3.subject = '';
+                    this.state3.website = '';
+                    this.state3.message = '';
+                    this.v3$.$reset();
                     this.errormessage = '';
-                    this.successmessage = response.data.messase;
+                    this.successmessage = response.data.msg;
                     this.buttonclick = false;
                     this.$router.push("/thank-you");
                 } else {
                     this.successmessage = '';
-                    this.errormessage = response.data.messase;
+                    this.errormessage = response.data.msg;
                     this.buttonclick = false;
                 }
 
