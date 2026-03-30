@@ -283,24 +283,28 @@ export default {
 
             if (this.emailField) {
                 //console.log("TEXTIF");
-                await axios.post(BASE_URL_API+'newsletter.php',
+                await axios.post(BASE_URL_API_DATA+'newsletter-subscribe',
                 {
                     email: this.emailField
                 })
                 .then((response) => {
-                    console.log("DATA EMAIL:",response);
-                    if (response.data.result == 'success') {
-                        this.emailField= '';
-                        this.errormessage = '';
-                        this.successmessage = 'You have successfully subscribed to the newsletter.';
-                        this.buttonclick = false;       
-                    } else {
-                        this.successmessage = '';
-                        this.errormessage = 'Somthing went wrong';
-                        this.buttonclick = false;       
-                    }
+                console.log("DATA EMAIL:",response);
+                  if (response.data.status == 'success') {
+                      this.emailField = '';
+                      this.errormessage = '';
+                      this.successmessage = response.data.msg;
+                      this.buttonclick = false;       
+                  } else if (response.data.status == 'error') {
+                      this.successmessage = '';
+                      this.errormessage = response.data.msg;
+                      this.buttonclick = false;       
+                  } else {
+                      this.successmessage = '';
+                      this.errormessage = 'Something went wrong';
+                      this.buttonclick = false;       
+                  }
 
-                })
+              })
                 .catch(({ response }) => {
                     this.error = response;
                     console.log("DATA ERROR: ",this.error);
