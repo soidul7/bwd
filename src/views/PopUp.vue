@@ -19,7 +19,7 @@
                               <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
                   </div>
                   <div class="modalText">
-                      <h6>7901 4th ST N STE 8022 St. Petersburg, FL 33702</h6>
+                      <h5>7901 4th ST N STE 8022 St. Petersburg, FL 33702</h5>
                   </div>
               </div>
               <div class="svgText">
@@ -29,7 +29,7 @@
                       </div>
                       <div class="modalText">
                         <a href="tel:+1(727) 300-6244">
-                          <h6>+1(727) 300-6244</h6>
+                          <h5>+1(727) 300-6244</h5>
                           </a>
                       </div>
               </div>
@@ -46,7 +46,7 @@
                  
                 <div class="modalText">
                   <a href="https://teams.microsoft.com/l/chat/0/0?users=bigwavedevelopment@gmail.com" target="_blank">
-                    <h6>david@bigwavedevelopment.com</h6>
+                    <h5>david@bigwavedevelopment.com</h5>
                   </a>
                 </div>
              
@@ -400,7 +400,7 @@ export default defineComponent({
           background: #FFFFFF;
           box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.18);
           border-radius: 20px;
-          padding: 50px;
+          padding: 40px 30px;
           height: 100%;
           position: relative;
         }
@@ -425,14 +425,21 @@ export default defineComponent({
           display: none;
         }
         .svgText  {
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            padding-bottom: 30px;
+          position: relative;
+          z-index: 5;
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          padding-bottom: 30px;
         }
         .modalsvg  {
-          width: 48px;
+          width: 40px;
+          flex-shrink: 0;
+        }
+        .modalsvg svg{
+          width: 24px;
+          height: 24px;
         }
         .modalText  {
           width: calc(100% - 48px);
@@ -446,10 +453,9 @@ export default defineComponent({
         }
         .modalText h5  {
           font-weight: 400;
-          font-size: 20px;
-          line-height: 26px;
+          font-size: 16px;
+          line-height: 1.4;
           color: #353535;
-          padding-top: 10px;
           word-break: break-all;
         }
         .modalRightInput h4  {

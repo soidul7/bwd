@@ -101,8 +101,8 @@
 
     <section class="contactInfo">
         <div class="container">
-            <div class="row conPaddGap">
-                <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="conPaddGap">
+                <div class="col">
                     <div class="conInfoBox">
                         <img src="frontend/images/contact/Vector1.png">
                         <h3>Address</h3>
@@ -113,21 +113,21 @@
 
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col">
                     <div class="conInfoBox"> 
                         <img src="frontend/images/contact/Vector2.png">
                         <h3>Email Us</h3>
                         <p><a href="mailto:david@bigwavedevelopment.com" style="color:white">david@bigwavedevelopment.com</a></p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col">
                     <div class="conInfoBox">
                         <img src="frontend/images/contact/Vector3.png">
                         <h3>Phone</h3>
                         <p><a href="tel:+1(727) 300-6244" style="color:white;cursor:pointer;">+1(727) 300-6244</a></p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col">
                     <div class="conInfoBox">
                         <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" fill="#D33E32" class="bi bi-microsoft-teams" viewBox="0 0 16 16">
                         <path d="M9.186 4.797a2.42 2.42 0 1 0-2.86-2.448h1.178c.929 0 1.682.753 1.682 1.682zm-4.295 7.738h2.613c.929 0 1.682-.753 1.682-1.682V5.58h2.783a.7.7 0 0 1 .682.716v4.294a4.197 4.197 0 0 1-4.093 4.293c-1.618-.04-3-.99-3.667-2.35Zm10.737-9.372a1.674 1.674 0 1 1-3.349 0 1.674 1.674 0 0 1 3.349 0m-2.238 9.488-.12-.002a5.2 5.2 0 0 0 .381-2.07V6.306a1.7 1.7 0 0 0-.15-.725h1.792c.39 0 .707.317.707.707v3.765a2.6 2.6 0 0 1-2.598 2.598z"/>
@@ -137,7 +137,7 @@
                         <a href="https://teams.microsoft.com/l/chat/0/0?users=bigwavedevelopment@gmail.com" target="_blank" style="color:white;cursor:pointer;"><p> david@bigwavedevelopment.com</p></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col">
                     <div class="conInfoBox">
                        <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" fill="#D33E32"  class="bi bi-telegram" viewBox="0 0 16 16">
                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
@@ -147,7 +147,6 @@
                         <a href="https://t.me/bigwave_llc" target="_blank" style="color:white;cursor:pointer;"><p> @bigwave_llc</p></a>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
@@ -573,27 +572,30 @@ a{
     border: 1px solid rgba(85, 85, 85, 0.5);
     border-radius: 10px;
     text-align: center;
-    padding: 45px 40px;
+    padding: 30px 20px;
     height: 100%;
 }
+.contactInfo .conInfoBox svg,
 .contactInfo .conInfoBox img  {
     display: block;
     margin: 0 auto;
-    padding-bottom: 41px;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 .contactInfo .conInfoBox h3  {
     font-weight: 500;
     font-size: 18px;
-    line-height: 25px;
+    line-height: 100%;
     text-align: center;
     letter-spacing: 0.12em;
     color: #EA4335;
-    padding-bottom: 24px;
+    padding:18px 0 8px;
 }
 .contactInfo .conInfoBox p  {
     font-weight: 400;
-    font-size: 17px;
-    line-height: 26px;
+    font-size: 14px;
+    line-height: 140%;
     text-align: center;
     color: #FFFFFF;
     word-break: break-all;
@@ -604,8 +606,11 @@ a{
 /*conInput section start here*/
 
 
-.contactInfo .row.conPaddGap  {
-  row-gap: 30px;
+.contactInfo .conPaddGap  {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }  
 .conInput  {
     padding: 100px 0 130px ;
@@ -1024,7 +1029,9 @@ a{
 
 
 @media (max-width: 1199px){
-
+.contactInfo .conPaddGap {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
     .banner-content .hero-text h2,
     .banner-content .hero-text h1 {
         font-size: 45px;
@@ -1174,9 +1181,6 @@ a{
         font-size: 24px;
         margin-bottom: 16px;
     }
-    .contactInfo .conInfoBox img {
-    padding-bottom: 15px;
-  }
   .contactInfo .conInfoBox h3 {
     padding-bottom: 10px;
   }
@@ -1193,11 +1197,8 @@ a{
 
 }
 @media (max-width: 767px) {
-    .contactInfo .conInfoBox p {
-        font-size: 16px;
-    }
-    .contactInfo .conInfoBox {
-        padding: 30px 10px !important;
+    .contactInfo .conPaddGap {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .brand-forefront .article-ttx p:first-of-type {
         margin-bottom: 20px;
@@ -1298,6 +1299,9 @@ a{
     }
     .contact-section .fild-cnt .form-group{
         flex-direction: column;
+    }
+    .contactInfo .conPaddGap {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
 
