@@ -3,7 +3,7 @@
  <NavBar/>
   <!-- banner start here :style="{ color, fontSize: `${fontSize}px` }" -->
 
-     <div :style="{'background-image':'url('+blogDetails.article_image+')'}" class="banner-content banner-content-about bannerBackground" >
+     <div :style="{'background-image':'url('+blogDetails.article_image+')'}" class="banner-style-nw banner-content banner-content-about bannerBackground" >
       <div class="hero-text bgText">
         <h1><strong>{{blogDetails.title}}</strong></h1>
         <!-- <p> We're Very Experience In Digital marketing  </p> -->
@@ -45,7 +45,6 @@
 
                 <p class="mb-5">The tagline is usually placed directly below and consists of a pre-written phrase or sentence. In most cases, it clarifies the brand's mission or serves as a catchphrase to entice new clients.
                   It is not always necessary to include both a tagline and a logo to attract more viewers. However, more conversions can be gained by strategically placing with the tagline. It conveys the company's essential values concisely, attracting the desired demographic. Logos can also help an organization's reputation and professionalism by increasing brand loyalty and strengthening its legitimacy. All of these benefits contribute to the long-term and successful growth of your company.</p>
-
                  -->
               </div>
 
@@ -347,7 +346,7 @@ export default {
 }
 .bannerBackground .bgText h1{
     font-weight: 400;
-    font-size: 40px !important;
+    font-size: 40px;
     color: #ffffff !important;
     line-height: 72px;
     position: relative;
@@ -1265,9 +1264,6 @@ a{
     }
     .count-down-area .count-item p {
         font-size: 15px;
-    }
-    .banner-content .hero-text .hero-button-sctn{
-        margin-bottom: 50px;
     }
     .banner-content {
         min-height: unset;

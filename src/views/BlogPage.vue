@@ -657,7 +657,7 @@ a{
     display: block;
 }
 .blogTab .card-item .atle-text{
-    padding: 0 10px 0 30px;
+    padding: 0 20px;
 }
 .blogTab .card-item .atle-text .date{
     display: flex;
@@ -678,9 +678,9 @@ a{
 }
 .blogTab .card-item .atle-text .headline h1 {
     font-weight: 600;
-    font-size: 19px;
+    font-size: 18px;
     color: #000000;
-    padding: 15px 0 50px 0;
+    padding: 15px 0 30px 0;
     display: block;
 }
 .blogTab .card-item .atle-text .btn{
@@ -771,9 +771,7 @@ a{
 }
 
 .blogBtnPosition {
-    position: absolute;
-    top: 85%;
-    left: 31px;
+    
 }
 
 
@@ -1139,7 +1137,7 @@ a{
     font-size: 15px;
   }
   .blogTab .card-item .atle-text .headline h1 {
-    font-size: 17px;
+    font-size: 16px;
   }
   .blogTab .card-item .atle-text .btn {
     padding: 6px 20px;

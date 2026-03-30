@@ -1752,6 +1752,14 @@ video{
     .grow-business {
         margin-bottom: 100px;;
     } 
+    .services-plate-sect .card-wrapper .card-item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .services-plate-sect .card-wrapper .card-item .overlay{
+        margin-top: auto;
+    }
 }
 @media (max-width: 991px) {
     .iframeYT {

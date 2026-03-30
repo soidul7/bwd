@@ -24,9 +24,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
   
 }
-p{
-  line-height: 25px;
-}
+
 a{  
   text-decoration:none; 
   outline:none !important;
@@ -422,12 +420,12 @@ ul,li{
   margin-top: 24px;
   margin-bottom: 24px;
 }
-.blog-dtl-sect li+li{
+.blog-dtl-sect .content li+li{
   margin-top: 10px;
 }
-.blog-dtl-sect ul,
-.blog-dtl-sect ol,
-.blog-dtl-sect dl{
+.blog-dtl-sect .content ul,
+.blog-dtl-sect .content ol,
+.blog-dtl-sect .content dl{
   padding-left: 20px;
 }
 .blog-dtl-sect h1,
@@ -448,6 +446,24 @@ ul,li{
   object-fit: cover;
 }
 
+.blogTab .card-item{
+  display: flex;
+  flex-direction: column;
+}
+.blogTab .card-item .atle-text {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.blogTab .card-item .date+ul {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.blogTab .card-item .date+ul .blogBtnPosition{
+    margin-top: auto;
+}
+
 @media (max-width: 1199px){
   .blog-news-sect .card-item>img:first-child{
     height: 180px;
@@ -463,4 +479,10 @@ ul,li{
     height: auto;
     max-height: 280px;
   }
+}
+
+@media (max-width: 480px) {
+    .banner-content .hero-text h2, .banner-content .hero-text h1 {
+        font-size: 25px !important;
+    }
 }
