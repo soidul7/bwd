@@ -11,13 +11,13 @@
               <p>We'll go into your data, examine your digital footprint, and provide recommendations to help you achieve your objectives with custom programmes.</p>
               <div class="icon-column">
                 <a href="https://www.facebook.com/bigwavedevelopmentagency" class="btn">
-                  <img src="frontend/images/icon/facebook.svg" alt="">
+                  <img :src="publicPath + 'frontend/images/icon/facebook.svg'" alt="">
                 </a>
                 <a href="https://twitter.com/BWD2008" class="btn">
-                  <img src="frontend/images/icon/twi.svg" alt="">
+                  <img :src="publicPath + 'frontend/images/icon/twi.svg'" alt="">
                 </a>
                 <a href="https://www.linkedin.com/company/bigwavedevelopment/" class="btn">
-                  <img src="frontend/images/icon/link.svg" alt="">
+                  <img :src="publicPath + 'frontend/images/icon/link.svg'" alt="">
                 </a>
                 
                 
@@ -163,6 +163,7 @@
     
     data() {
         return {
+           publicPath: process.env.BASE_URL,
             emailField:'',
             errormessage: '',
             successmessage: '',
