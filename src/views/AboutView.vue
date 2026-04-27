@@ -4,7 +4,7 @@
      <!-- navigationend -->
      <!-- banner start here -->
 
-     <div class="banner-content banner-content-about">
+     <div class="banner-content banner-style-nw" style="background-image: url('frontend/images/banner/bwd-bg1.jpg');">
       <div class="hero-text">
         <h2><strong>About Us</strong></h2>
         <p> Leap Way Ahead With Us For Stronger Growth </p>

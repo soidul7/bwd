@@ -4,7 +4,7 @@
 
     <!-- banner start here -->
 
-     <div class="banner-content banner-content-about">
+    <div class="banner-content banner-style-nw" style="background-image: url('frontend/images/banner/bwd-bg1.jpg');">
       <div class="hero-text">
         <h1><strong>Testimonials</strong></h1>
         <p> What Our Customers Are Saying</p>

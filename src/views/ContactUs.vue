@@ -3,7 +3,7 @@
     <NavBar/>
     <!-- banner start here -->
 
-    <div class="banner-content">
+    <div class="banner-content banner-style-nw" style="background-image: url('frontend/images/banner/bwd-bg1.jpg');">
         <div class="hero-text">
           <h2><strong>Contact Us</strong></h2>
           <p>Stay Connected To Get Popular Marketing Services </p>

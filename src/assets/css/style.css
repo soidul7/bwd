@@ -463,6 +463,35 @@ ul,li{
 .blogTab .card-item .date+ul .blogBtnPosition{
     margin-top: auto;
 }
+.banner-style-nw{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-style-nw::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #000000a1;
+}
+.banner-style-nw .hero-text{
+    position: relative;
+    z-index: 1;
+}
+.banner-style-nw .hero-text h1,
+.banner-style-nw .hero-text h2{
+    color: #FFFFFF !important;
+}
+.banner-style-nw .shape-float img{
+    z-index: 2;
+}
+.banner-style-nw.banner-content .hero-text .hero-button-sctn{
+    background-image: unset;
+}
 
 @media (max-width: 1199px){
   .blog-news-sect .card-item>img:first-child{
@@ -470,11 +499,31 @@ ul,li{
   }
 }
 @media (max-width: 991px){
+  .banner-style-nw{
+        margin-top: 60px;
+        padding: 120px 0 80px;
+    }
+    .banner-style-nw.banner-content .hero-text .hero-button-sctn{
+        height: auto;
+        margin-bottom: 0;
+    }
+    .banner-style-nw.banner-content .hero-text p {
+        margin: 20px 0 48px;
+    }
+    .banner-style-nw.banner-content .hero-text {
+        margin: 0;
+    }
   .blog-news-sect .card-item>img:first-child{
     height: 134px;
   }
 }
 @media (max-width: 767px){
+  .banner-style-nw.banner-content .hero-text p {
+        margin: 20px 0 35px;
+    }
+    .banner-style-nw {
+        padding: 50px 0 58px;
+    }
   .blog-news-sect .card-item>img:first-child {
     height: auto;
     max-height: 280px;

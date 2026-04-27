@@ -3,7 +3,7 @@
  <NavBar/>
   <!-- banner start here -->
 
-     <div class="banner-content banner-content-about">
+     <div class="banner-content banner-style-nw" style="background-image: url('frontend/images/banner/bwd-bg1.jpg');">
       <div class="hero-text">
         <h2><strong>Portfolio</strong></h2>
         <p> We're Very Experienced In Digital marketing  </p>
@@ -28,7 +28,7 @@
      <section class="portfolio-section-new">
          <div class="container">
             <div class="heading-title">
-                <h2>Our <Strong>portfolio</Strong> </h2>
+                <h2>Our <Strong>Portfolio</Strong> </h2>
             </div>
              <div class="row gy-4">
             <div 

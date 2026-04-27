@@ -1,7 +1,7 @@
 <template>
     <MetaTag :title="title" :description="description"/>
     <NavBar/>
-        <div class="banner-content banner-content-about">
+       <div class="banner-content banner-style-nw" style="background-image: url('frontend/images/banner/bwd-bg1.jpg');">
             <div class="hero-text">
                 <h1><strong>Services</strong></h1>
                 <p> We've offered a diverse set of services to our customers</p>

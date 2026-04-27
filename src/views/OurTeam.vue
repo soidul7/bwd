@@ -3,7 +3,7 @@
    <NavBar/>
     <!-- banner start here -->
 
-     <div class="banner-content banner-content-about">
+    <div class="banner-content banner-style-nw" style="background-image: url('frontend/images/banner/bwd-bg1.jpg');">
       <div class="hero-text">
         <h2><strong>Our Team</strong></h2>
         <p> We’re Very Experienced In Digital marketing  </p>

@@ -2,7 +2,7 @@
     <MetaTag :title="title" :description="description"/>    
     <NavBar/>
 
-     <div class="banner-content banner-content-about">
+    <div class="banner-content banner-style-nw" style="background-image: url('frontend/images/banner/bwd-bg1.jpg');">
       <div class="hero-text">
         <h1><strong>Digital Marketing</strong></h1>
         <p> Increase Your ROI And Put Your Brand To The Forefront </p>

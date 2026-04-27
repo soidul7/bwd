@@ -67,7 +67,7 @@
 
      <!-- banner start here -->
 
-     <div class="banner-content banner-content-about">
+    <div class="banner-content banner-style-nw" style="background-image: url('frontend/images/banner/bwd-bg1.jpg');">
       <div class="hero-text">
         <h2><strong>Blog Details</strong></h2>
         <p> We’re Very Experience In Digital marketing  </p>
