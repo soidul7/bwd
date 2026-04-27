@@ -43,11 +43,11 @@
                   Services
                   </router-link>
                 </li>
-                <!-- <li>
-                  <router-link to="/Portfolio"  @click="moveUp">
+                <li>
+                  <router-link to="/portfolio"  @click="moveUp">
                   Portfolio
                   </router-link>
-                </li> -->
+                </li>
                 <li>
                   <router-link to="/our-team"  @click="moveUp">
                    Our Team

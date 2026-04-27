@@ -24,7 +24,7 @@ import WebDesign from '../views/WebDesign.vue'
 import PrivacyPolicy from '../views/PrivacyPolicy.vue'
 import TermsAndConditions from '../views/TermsAndConditions.vue'
 import ThankYou from '../views/ThankYou.vue'
-import Portfolio from '../views/Portfolio.vue'
+import PortfolioNew from '../views/PortfolioNew.vue'
 import PortfolioDetails from '../views/PortfolioDetails.vue'
 import DigitalMarketing from '../views/DigitalMarketing.vue'
 import UnlimitedGraphicDesignPackages from '../views/UnlimitedGraphicDesignPackages.vue'
@@ -190,7 +190,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/portfolio',
     name: 'portfolio',
-    component: Portfolio
+    component: PortfolioNew
   },
   {
     path: '/portfolio/:slug',

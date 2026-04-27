@@ -2,7 +2,7 @@
     <MetaTag :title="title" :description="description"/>
     <NavBar/>
 
-     <div class="banner-content banner-style-nw" style="background-image: url('frontend/images/banner/banner-nw.jpg');">
+     <div class="banner-content banner-style-nw" style="background-image: url('frontend/images/banner/bwd-bg1.jpg');">
       <div class="hero-text">
         <h2><strong>Evolve Better As You Grow Bigger</strong></h2>
         <p>Set Digital Trends With Precision</p>
@@ -594,28 +594,51 @@ export default defineComponent({
       },
     },
     
-      images: [
-            "frontend/images/client/Logos1.png", 
-            "frontend/images/client/Logos2.png", 
-            "frontend/images/client/Logos3.png", 
-            "frontend/images/client/Logos5.png",
-            "frontend/images/client/Logos1.png", 
-            "frontend/images/client/Logos2.png",
-            "frontend/images/client/Logos3.png", 
-            "frontend/images/client/Logos5.png",
-            "frontend/images/client/Logos1.png", 
-            "frontend/images/client/Logos2.png", 
-            "frontend/images/client/Logos3.png", 
-            "frontend/images/client/Logos5.png",
-            "frontend/images/client/Logos1.png", 
-            "frontend/images/client/Logos2.png", 
-            "frontend/images/client/Logos3.png",  
-            "frontend/images/client/Logos5.png",
-            "frontend/images/client/Logos1.png", 
-            "frontend/images/client/Logos2.png", 
-            "frontend/images/client/Logos3.png",  
-            "frontend/images/client/Logos5.png"
+    //   images: [
+    //         "frontend/images/client/Logos1.png", 
+    //         "frontend/images/client/Logos2.png", 
+    //         "frontend/images/client/Logos3.png", 
+    //         "frontend/images/client/Logos5.png",
+    //         "frontend/images/client/Logos1.png", 
+    //         "frontend/images/client/Logos2.png",
+    //         "frontend/images/client/Logos3.png", 
+    //         "frontend/images/client/Logos5.png",
+    //         "frontend/images/client/Logos1.png", 
+    //         "frontend/images/client/Logos2.png", 
+    //         "frontend/images/client/Logos3.png", 
+    //         "frontend/images/client/Logos5.png",
+    //         "frontend/images/client/Logos1.png", 
+    //         "frontend/images/client/Logos2.png", 
+    //         "frontend/images/client/Logos3.png",  
+    //         "frontend/images/client/Logos5.png",
+    //         "frontend/images/client/Logos1.png", 
+    //         "frontend/images/client/Logos2.png", 
+    //         "frontend/images/client/Logos3.png",  
+    //         "frontend/images/client/Logos5.png"
+    // ],
+
+    images: [
+        "frontend/images/client/adultempire.com.png",
+        "frontend/images/client/betwinner2.com.png",
+        "frontend/images/client/blowpass.com.png",
+        "frontend/images/client/bybit.com.png",
+        "frontend/images/client/clash.gg.png",
+        "frontend/images/client/crazybet.com.png",
+        "frontend/images/client/crushon.ai.png",
+        "frontend/images/client/csgobig.com.png",
+        "frontend/images/client/dateoverforty.com.png",
+        "frontend/images/client/duckyluck.ag.png",
+        "frontend/images/client/evilangel.com.png",
+        "frontend/images/client/gammastats.com.png",
+        "frontend/images/client/indiadafa.com.png",
+        "frontend/images/client/masterplay.io.png",
+        "frontend/images/client/mcluck.com.png",
+        "frontend/images/client/ourdream.ai.png",
+        "frontend/images/client/propnumberone.com.png",
+        "frontend/images/client/slotsandcasino.ag.png",
+        "frontend/images/client/traveltalktours.com.png"
     ],
+    
     showPopup:false,
     title:"Big Wave Development LLC",
     description:"We'll go into your data, examine your digital footprint, and provide recommendations to help you achieve your objectives with custom programmes.",

@@ -149,16 +149,17 @@
                  Blog
                 </router-link>
               </li> -->
-              <!-- <li class="nav-item">
-                <router-link  class="nav-link" exact-active-class="active" to="/portfolio"  @click="moveUp"> 
-                  Portfolio 
-                </router-link>
-              </li> -->
+             
             <li class="nav-item">
                 <router-link  class="nav-link" exact-active-class="active" to="/blog"  @click="moveUp"> 
                   Blog 
                 </router-link>
               </li>
+               <li class="nav-item">
+                <router-link  class="nav-link" exact-active-class="active" to="/portfolio"  @click="moveUp"> 
+                  Portfolio 
+                </router-link>
+              </li> 
               <li class="nav-item">
                 <router-link  class="nav-link" exact-active-class="active" to="/contact-us"  @click="moveUp">
                  Contact
