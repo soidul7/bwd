@@ -623,7 +623,6 @@ export default defineComponent({
         "frontend/images/client/blowpass.com.png",
         "frontend/images/client/bybit.com.png",
         "frontend/images/client/clash.gg.png",
-        "frontend/images/client/crazybet.com.png",
         "frontend/images/client/crushon.ai.png",
         "frontend/images/client/csgobig.com.png",
         "frontend/images/client/dateoverforty.com.png",
